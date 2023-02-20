@@ -1,11 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { mobilesData } from "../mokData";
-import { Button } from "@mui/material";
+import { Alert, Button, Snackbar } from "@mui/material";
 
 import "../styles/ProductPage.scss";
 
 const ProductPage = () => {
+  const [open, setOpen] = useState();
   let mobile = {};
   const params = useParams();
 
@@ -18,6 +19,14 @@ const ProductPage = () => {
   };
 
   searchMobile();
+
+  const addToCart = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <section className='product'>
@@ -80,10 +89,17 @@ const ProductPage = () => {
                 {mobile.cameraPixels}
               </li>
             </ul>
-            <Button
-              variant='contained'
-              //   onClick={addToCart}
+            <Snackbar
+              anchorOrigin={{ vertical: "top", horizontal: "center" }}
+              open={open}
+              autoHideDuration={2000}
+              onClose={handleClose}
             >
+              <Alert severity='success' sx={{ width: "100%" }} variant='filled'>
+                Товар успешно добавлен в корзину
+              </Alert>
+            </Snackbar>
+            <Button variant='contained' color='success' onClick={addToCart}>
               Добавить в корзину
             </Button>
           </div>

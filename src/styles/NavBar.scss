@@ -2,6 +2,10 @@
   background-color: rgb(106, 106, 255);
   color: #fff;
 
+  button {
+    font-family: "Rubik";
+  }
+
   &__wrapper {
     padding: 16px 56px;
     display: flex;
@@ -21,6 +25,10 @@
   &__menu {
     display: flex;
     align-items: center;
+  }
+
+  &__button {
+    margin-right: 24px !important;
   }
 
   &__profile-name {

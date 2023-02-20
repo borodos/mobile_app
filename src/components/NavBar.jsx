@@ -1,7 +1,9 @@
-import { Avatar, Badge, Button, IconButton } from "@mui/material";
+import { Avatar, Badge, Button } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/NavBar.scss";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 
 const NavBar = () => {
   return (
@@ -11,14 +13,22 @@ const NavBar = () => {
           <p className='navbar__logo'>Mobile Shop</p>
         </Link>
         <div className='navbar__menu'>
-          <Button aria-label='cart'>
-            <Badge badgeContent={574} color='secondary'>
-              adsadad
+          <Button className='navbar__button' variant='contained'>
+            <Badge badgeContent={4} color='secondary'>
+              <ShoppingCartIcon />
             </Badge>
           </Button>
           <span className='navbar__profile-name'>Giga Gigach</span>
           <Avatar className='navbar__avatar' alt='Giga Gigach' src='/static/images/avatar/1.jpg' />
         </div>
+        <Button
+          className='navbar__button'
+          variant='contained'
+          color='error'
+          endIcon={<ExitToAppIcon />}
+        >
+          Logout
+        </Button>
       </div>
     </section>
   );
