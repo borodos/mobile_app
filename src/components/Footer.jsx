@@ -1,9 +1,26 @@
 import React from "react";
 import "../styles/Footer.scss";
+import { useSelector } from "react-redux";
 
 const Footer = () => {
+  const user = useSelector((state) => state.authUserSlice.user);
+
+  // const imageProfile = () => {
+  //   if (user.image) {
+  //     return require("../../assets/potter.jpeg");
+  //   }
+  // };
+
+  const showComponent = () => {
+    if (!user?.isAuth) {
+      return "hidden";
+    } else {
+      return "footer";
+    }
+  };
+
   return (
-    <section className='footer'>
+    <section className={showComponent()}>
       <ul className='footer__support'>
         <li className='footer__title'>Поддержка</li>
         <li>Доставка</li>
