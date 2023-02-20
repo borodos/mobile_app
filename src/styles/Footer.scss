@@ -1,0 +1,26 @@
+.footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  font-size: 0.9em;
+  box-shadow: 0 0 15px black;
+
+  &__support {
+  }
+
+  &__projects {
+  }
+
+  &__company {
+  }
+
+  &__contacts {
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+}

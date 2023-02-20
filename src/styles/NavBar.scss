@@ -1,0 +1,38 @@
+.navbar {
+  background-color: rgb(106, 106, 255);
+  color: #fff;
+
+  &__wrapper {
+    padding: 16px 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
+  &__logo:hover {
+    transform: scale(1.2);
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+
+  &__profile-name {
+    padding-right: 8px;
+    cursor: pointer;
+  }
+
+  &__profile-name:hover {
+    text-decoration: underline;
+  }
+
+  &__avatar {
+    cursor: pointer;
+  }
+}

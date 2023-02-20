@@ -1,0 +1,17 @@
+.main {
+  &__wrapper {
+  }
+
+  &__title {
+    padding: 16px 0;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: space-between;
+    padding-bottom: 16px;
+    column-gap: 16px;
+    row-gap: 32px;
+  }
+}

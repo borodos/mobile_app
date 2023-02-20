@@ -1,0 +1,64 @@
+.mobile-card {
+  max-width: 280px;
+  box-shadow: 0 0 8px rgba(117, 117, 117, 0.8);
+  border-radius: 8px;
+
+  &__wrapper {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__title {
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 8px 0;
+  }
+
+  &__image {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    padding-bottom: 12px;
+
+    img {
+      box-shadow: 0 0 8px rgb(133, 133, 133);
+      border-radius: 8px;
+      padding: 8px;
+      min-height: 216px;
+    }
+  }
+
+  &__description {
+    display: inline-block;
+    cursor: pointer;
+    font-style: italic;
+    padding-bottom: 4px;
+  }
+
+  &__rating {
+    padding-bottom: 8px;
+  }
+
+  .rate {
+    font-style: italic;
+  }
+
+  &__description:hover {
+    text-decoration: underline;
+  }
+
+  &__price {
+    font-weight: bold;
+    padding-bottom: 8px;
+  }
+
+  &__button {
+    font-family: "Rubik" !important;
+  }
+}
