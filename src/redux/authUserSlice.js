@@ -9,6 +9,7 @@ const authUserSlice = createSlice({
   reducers: {
     setAuthUser(state, action) {
       state.user = action.payload;
+      localStorage.setItem("token", state.user.token);
     },
     logoutAuthUser(state) {
       state.user = {};

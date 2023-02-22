@@ -10,11 +10,11 @@ const NavBar = () => {
   const cart = useSelector((state) => state.cartSlice.cart);
   const user = useSelector((state) => state.authUserSlice.user);
 
-  // const imageProfile = () => {
-  //   if (user.image) {
-  //     return require("../../assets/potter.jpeg");
-  //   }
-  // };
+  const imageProfile = () => {
+    if (user.image) {
+      return require("../assets/somebody.jpeg");
+    }
+  };
 
   const showComponent = () => {
     if (!user?.isAuth) {
@@ -36,8 +36,16 @@ const NavBar = () => {
               <ShoppingCartIcon />
             </Badge>
           </Button>
-          <span className='navbar__profile-name'>Giga Gigach</span>
-          <Avatar className='navbar__avatar' alt='Giga Gigach' src='/static/images/avatar/1.jpg' />
+          <Link to={`users/${user.id}`}>
+            <span className='navbar__profile-name'>
+              {user?.firstName} {user?.secondName}
+            </span>
+          </Link>
+          <Avatar
+            className='navbar__avatar'
+            alt={`${user?.firstName} ${user?.secondName}`}
+            src={imageProfile()}
+          />
         </div>
         <Button
           className='navbar__button'

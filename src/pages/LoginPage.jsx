@@ -55,7 +55,7 @@ const LoginPage = () => {
         <div className='login__container'>
           <div className='login__wrapper'>
             <div className='login__title'>
-              <span>Welcome to MySoft! Please, sign in.</span>
+              <span>Welcome to Mobile Shop! Please, sign in.</span>
             </div>
             <div className='login__body'>
               <form id='form-login' onSubmit={onSubmit}>

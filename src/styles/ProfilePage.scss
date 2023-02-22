@@ -1,0 +1,51 @@
+.profile {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+
+  &__container {
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgb(0, 0, 0);
+    min-width: 20%;
+  }
+
+  &__wrapper {
+    padding: 16px 8px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__img-container {
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+
+    input {
+      margin-top: 16px;
+    }
+  }
+
+  &__content {
+  }
+
+  &__email {
+  }
+
+  &__firstname {
+  }
+
+  &__secondname {
+  }
+
+  &__password {
+  }
+}
+.info {
+}
