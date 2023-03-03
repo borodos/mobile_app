@@ -8,15 +8,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { addProduct } from "../redux/cartSlice";
 
 const ProductPage = () => {
-  const navigate = useNavigate();
-  const user = useSelector((state) => state.authUserSlice.user);
-
-  useEffect(() => {
-    if (!user.isAuth) {
-      navigate("/login");
-    }
-  });
-
   let mobile = {};
 
   const [openSuccess, setOpenSuccess] = useState();

@@ -1,17 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import CartCard from "./../components/UI/CartCard";
+
+import "../styles/CartPage.scss";
 
 const CartPage = () => {
-  const navigate = useNavigate();
-  const user = useSelector((state) => state.authUserSlice.user);
-
-  useEffect(() => {
-    if (!user.isAuth) {
-      navigate("/login");
-    }
-  });
-
   const cart = useSelector((state) => state.cartSlice.cart);
 
   return (
@@ -20,9 +14,9 @@ const CartPage = () => {
         {cart.length ? (
           <div className='cart__wrapper'>
             <div className='cart__list'>
-              {/* {cart.map((value, index, array) => (
-                <CartCard key={`${value}-${index}`} computer={value} />
-              ))} */}
+              {cart.map((value, index, array) => (
+                <CartCard key={`${value}-${index}`} mobile={value} />
+              ))}
             </div>
           </div>
         ) : (

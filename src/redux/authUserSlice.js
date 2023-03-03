@@ -13,6 +13,7 @@ const authUserSlice = createSlice({
     },
     logoutAuthUser(state) {
       state.user = {};
+      localStorage.removeItem("token");
     },
     setProfileImage(state, action) {
       state.user.image = action.payload;

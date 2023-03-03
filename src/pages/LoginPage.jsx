@@ -18,6 +18,7 @@ import "../styles/AuthPages.scss";
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const navigate = useNavigate();
 
   const isErrorEmail = email === "";
@@ -30,9 +31,6 @@ const LoginPage = () => {
     event.preventDefault();
     usersData.find((user) => {
       if (user.email === email && user.password === password) {
-        if (!user.isAuth) {
-          user.isAuth = true;
-        }
         dispatch(setAuthUser(user));
         navigate("/");
       } else {
@@ -55,36 +53,34 @@ const LoginPage = () => {
         <div className='login__container'>
           <div className='login__wrapper'>
             <div className='login__title'>
-              <span>Welcome to Mobile Shop! Please, sign in.</span>
+              <span>Добро пожаловать в Mobile Shop! Пожалуйста, войдите.</span>
             </div>
             <div className='login__body'>
               <form id='form-login' onSubmit={onSubmit}>
                 <FormControl className='email-container' isInvalid={isErrorEmail}>
                   <FormLabel>Email</FormLabel>
                   <Input type='email' value={email} onChange={(e) => setEmail(e.target.value)} />
-                  {isErrorEmail ? <FormErrorMessage>Email is required.</FormErrorMessage> : null}
+                  {isErrorEmail ? <FormErrorMessage>Заполните email.</FormErrorMessage> : null}
                 </FormControl>
                 <FormControl className='password-container' isInvalid={isErrorPassword}>
-                  <FormLabel>Password</FormLabel>
+                  <FormLabel>Пароль</FormLabel>
                   <Input
                     type='password'
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
-                  {isErrorPassword ? (
-                    <FormErrorMessage>Password is required.</FormErrorMessage>
-                  ) : null}
+                  {isErrorPassword ? <FormErrorMessage>Заполните пароль.</FormErrorMessage> : null}
                 </FormControl>
               </form>
             </div>
             <div className='login__text'>
               <span>
-                Don't have an account? <Link to='/registration'>Sign In</Link>
+                Нет аккаунта? <Link to='/registration'>Зарегистрироваться</Link>
               </span>
             </div>
             <div className='login__menu'>
               <Button colorScheme='gray' variant='outline' type='submit' form='form-login'>
-                Log In
+                Войти
               </Button>
             </div>
           </div>

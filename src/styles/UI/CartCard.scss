@@ -1,0 +1,54 @@
+.cart-card {
+  padding: 8px;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img-container {
+    margin-right: 16px;
+    box-shadow: 0 0 8px #000000;
+    border-radius: 8px;
+    min-width: 195px;
+
+    img {
+      border-radius: 8px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-weight: bold;
+  }
+
+  &__description {
+    cursor: pointer;
+    padding: 8px 0;
+  }
+
+  &__description:hover {
+    text-decoration: underline;
+  }
+
+  &__price {
+    font-style: italic;
+  }
+
+  &__menu {
+    padding-top: 8px;
+
+    button + button {
+      margin-left: 8px;
+    }
+  }
+
+  button {
+    font-family: "rubik";
+  }
+}

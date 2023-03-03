@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import "../styles/MainPage.scss";
 import MobileCard from "../components/UI/MobileCard";
@@ -9,12 +9,6 @@ import { useSelector } from "react-redux";
 const MainPage = () => {
   const navigate = useNavigate();
   const user = useSelector((state) => state.authUserSlice.user);
-
-  useEffect(() => {
-    if (!user.isAuth) {
-      navigate("/login");
-    }
-  });
 
   return (
     <section className='main'>

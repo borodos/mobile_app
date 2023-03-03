@@ -3,20 +3,12 @@ import { Avatar, ChakraProvider, Input } from "@chakra-ui/react";
 
 import "../styles/ProfilePage.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { setProfileImage } from "../redux/authUserSlice";
 
 const ProfilePage = () => {
-  const navigate = useNavigate();
   const user = useSelector((store) => store.authUserSlice.user);
   const [file, setFile] = useState("");
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (!user.isAuth) {
-      navigate("/login");
-    }
-  });
 
   const setImage = () => {
     if (file) {

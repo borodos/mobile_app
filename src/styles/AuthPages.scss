@@ -4,12 +4,17 @@
   align-items: center;
   justify-content: center;
   flex-grow: 1;
+  background: url("../assets//backl.jpg") no-repeat;
+  background-size: cover;
+  color: white;
 
   &__container {
     padding: 12px;
     width: 40%;
-    box-shadow: 0 0 8px rgb(97, 97, 97);
     border-radius: 8px;
+    box-shadow: 0 0 8px black;
+
+    backdrop-filter: blur(120px);
   }
 
   &__wrapper {
@@ -23,6 +28,13 @@
 
     .email-container {
       padding-bottom: 8px;
+      input {
+        box-shadow: 0 0 8px black;
+      }
+    }
+
+    .password-container input {
+      box-shadow: 0 0 8px black;
     }
   }
 
@@ -38,6 +50,9 @@
 }
 
 .register {
+  background: url("../assets//backl.jpg") no-repeat;
+  background-size: cover;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,8 +62,9 @@
   &__container {
     padding: 12px;
     width: 40%;
-    box-shadow: 0 0 8px rgb(97, 97, 97);
     border-radius: 8px;
+    backdrop-filter: blur(120px);
+    box-shadow: 0 0 8px black;
   }
 
   &__wrapper {
@@ -61,6 +77,16 @@
 
     .firstname-container {
       padding-right: 16px;
+      input {
+        box-shadow: 0 0 8px black;
+      }
+    }
+
+    .secondname-container {
+      padding-right: 16px;
+      input {
+        box-shadow: 0 0 8px black;
+      }
     }
   }
 
@@ -70,6 +96,13 @@
   &__body {
     .email-container {
       padding-bottom: 8px;
+    }
+    .password-container input {
+      box-shadow: 0 0 8px black;
+    }
+
+    .email-container input {
+      box-shadow: 0 0 8px black;
     }
   }
 

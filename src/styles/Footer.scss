@@ -1,26 +1,43 @@
 .footer {
-  background-color: black;
+  background-color: rgb(36, 36, 36);
   color: white;
   display: flex;
   justify-content: space-around;
   padding: 15px;
   font-size: 0.9em;
-  box-shadow: 0 0 15px black;
+  box-shadow: 0 0 15px rgb(140, 167, 255);
 
   &__support {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__company {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__title {
+    display: flex;
+    align-items: center;
     font-weight: bold;
     font-size: 1.2em;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+    border-bottom: 4px solid rgb(0, 89, 255);
   }
 }
