@@ -63,26 +63,24 @@ const RegisterPage = () => {
             </div>
             <div className='register__body'>
               <form id='form-register' onSubmit={onSubmit}>
-                <Box className='name-container' py={2}>
-                  <FormControl className='firstname-container' isInvalid={isErrorFirstName}>
-                    <FormLabel>Имя</FormLabel>
-                    <Input
-                      type='text'
-                      value={firstName}
-                      onChange={(e) => setFirstName(e.target.value)}
-                    />
-                    {isErrorEmail ? <FormErrorMessage>Заполните имя.</FormErrorMessage> : null}
-                  </FormControl>
-                  <FormControl className='secondname-container' isInvalid={isErrorSecondName}>
-                    <FormLabel>Фамилия</FormLabel>
-                    <Input
-                      type='text'
-                      value={secondName}
-                      onChange={(e) => setSecondName(e.target.value)}
-                    />
-                    {isErrorEmail ? <FormErrorMessage>Заполните фамилию.</FormErrorMessage> : null}
-                  </FormControl>
-                </Box>
+                <FormControl className='firstname-container' isInvalid={isErrorFirstName}>
+                  <FormLabel>Имя</FormLabel>
+                  <Input
+                    type='text'
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                  />
+                  {isErrorEmail ? <FormErrorMessage>Заполните имя.</FormErrorMessage> : null}
+                </FormControl>
+                <FormControl className='secondname-container' isInvalid={isErrorSecondName}>
+                  <FormLabel>Фамилия</FormLabel>
+                  <Input
+                    type='text'
+                    value={secondName}
+                    onChange={(e) => setSecondName(e.target.value)}
+                  />
+                  {isErrorEmail ? <FormErrorMessage>Заполните фамилию.</FormErrorMessage> : null}
+                </FormControl>
                 <Box py={2}>
                   <FormControl className='email-container' isInvalid={isErrorEmail}>
                     <FormLabel>Email</FormLabel>

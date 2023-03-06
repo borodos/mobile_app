@@ -420,4 +420,15 @@ export const usersData = [
       "eyJhbGciOiJDAazxXcaAWeqsaInR5cCI6IkpXVCJ9.ejSjdpoaSIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
     image: "",
   },
+  {
+    id: 3,
+    firstName: "Анастасия",
+    secondName: "Александровна",
+    isAuth: false,
+    email: "test@mail.ru",
+    password: "123456789",
+    token:
+      "eyJhbGciOiJDAazxXcaAWeqsaInR5cCI6IkpXVCJ9.ejSjdpoaSIiOiIxMsdouOPIhP12OnjkaO89PTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+    image: "",
+  },
 ];

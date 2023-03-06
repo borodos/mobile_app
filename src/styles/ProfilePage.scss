@@ -15,6 +15,8 @@
     padding: 16px 8px;
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
   }
 
   &__img-container {
@@ -25,8 +27,28 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    input[type="file"] {
+      display: none;
+    }
+    .custom-file-upload {
+      border: 1px solid #ccc;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      margin-top: 8px;
+      width: 100%;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
 
+    svg {
+      margin-right: 4px;
+    }
+
+    .file-preview {
+      margin: 0 10px;
+    }
     input {
       margin-top: 16px;
     }

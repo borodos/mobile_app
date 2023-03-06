@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Avatar, ChakraProvider, Input } from "@chakra-ui/react";
 
 import "../styles/ProfilePage.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { setProfileImage } from "../redux/authUserSlice";
+import { PhoneIcon, PlusSquareIcon, WarningIcon } from "@chakra-ui/icons";
 
 const ProfilePage = () => {
   const user = useSelector((store) => store.authUserSlice.user);
@@ -12,6 +13,7 @@ const ProfilePage = () => {
 
   const setImage = () => {
     if (file) {
+      console.log(file);
       const splittedFile = file.split("\\");
       const filePath = splittedFile[splittedFile.length - 1];
       dispatch(setProfileImage(`./assets/${filePath}`));
@@ -26,12 +28,11 @@ const ProfilePage = () => {
           <div className='profile__wrapper'>
             <div className='profile__img-container'>
               <Avatar size='2xl' src={setImage()} />
-              <Input
-                value={file}
-                placeholder='Download file'
-                type='file'
-                onChange={(e) => setFile(e.target.value)}
-              />
+              <label className='custom-file-upload'>
+                <input type='file' multiple onChange={(e) => setFile(e.target.value)} />
+                <PlusSquareIcon />
+                Прикрепить
+              </label>
             </div>
             <div className='profile__content'>
               <p className='profile__email info'></p>
@@ -45,7 +46,7 @@ const ProfilePage = () => {
                 Email: <span>{user.email}</span>
               </p>
               <p className='profile__password info'>
-                Password: <span>******</span>
+                Пароль: <span>******</span>
               </p>
             </div>
           </div>

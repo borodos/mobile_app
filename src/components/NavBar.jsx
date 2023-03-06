@@ -15,7 +15,7 @@ const NavBar = () => {
 
   const imageProfile = () => {
     if (user.image) {
-      return require("../assets/somebody.jpeg");
+      return require("../assets/grandbeauty00.jpg");
     }
   };
 
@@ -65,7 +65,7 @@ const NavBar = () => {
           endIcon={<ExitToAppIcon />}
           onClick={logout}
         >
-          Logout
+          Выйти
         </Button>
       </div>
     </section>

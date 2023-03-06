@@ -29,7 +29,7 @@ const LoginPage = () => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    usersData.find((user) => {
+    usersData.map((user) => {
       if (user.email === email && user.password === password) {
         dispatch(setAuthUser(user));
         navigate("/");
